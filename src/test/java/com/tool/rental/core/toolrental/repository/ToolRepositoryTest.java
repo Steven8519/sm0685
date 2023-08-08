@@ -32,7 +32,7 @@ class ToolRepositoryTest {
     }
 
     @AfterEach
-    public void tearDown() {
+    void tearDown() {
         toolRepository.deleteAll();
     }
 
@@ -47,7 +47,7 @@ class ToolRepositoryTest {
     }
 
     @Test
-    public void testRetrieveAllTools() {
+    void should_RetrieveAllTools_From_A_Database() {
         Tool hammer = new Tool();
         hammer.setToolCode("LMH452");
         hammer.setToolType("Hammer");
