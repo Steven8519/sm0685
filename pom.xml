@@ -64,6 +64,34 @@
             <groupId>jakarta.validation</groupId>
             <version>3.0.2</version>
         </dependency>
+        <dependency>
+            <artifactId>junit</artifactId>
+            <groupId>junit</groupId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <artifactId>spring-boot-test-autoconfigure</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <artifactId>testng</artifactId>
+            <groupId>org.testng</groupId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <artifactId>aspectjweaver</artifactId>
+            <groupId>org.aspectj</groupId>
+            <version>1.9.19</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <artifactId>spring-data-rest-webmvc</artifactId>
+            <groupId>org.springframework.data</groupId>
+            <version>4.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

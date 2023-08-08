@@ -1,27 +1,25 @@
-package com.tool.rental.core.toolrental.entity;
+package com.tool.rental.core.toolrental.dto;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Tool {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ToolDTO implements Serializable {
+
     private Long id;
 
-    @NotBlank
-    @Column(unique = true)
+    @NotBlank(message = "Tool code is required")
     private String toolCode;
 
-    @NotBlank
+    @NotBlank(message = "Tool type is required")
     private String toolType;
 
-    @NotBlank
+    @NotBlank(message = "Tool brand is required")
     private String toolBrand;
 }
