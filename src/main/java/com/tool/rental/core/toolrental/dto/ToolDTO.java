@@ -1,5 +1,9 @@
 package com.tool.rental.core.toolrental.dto;
 
+import com.tool.rental.core.toolrental.entity.Checkout;
+import com.tool.rental.core.toolrental.entity.Holiday;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;

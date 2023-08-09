@@ -28,7 +28,7 @@ class ToolRepositoryTest {
         Tool tool = new Tool();
         tool.setToolType("Hammer");
         tool.setToolCode("HAM123");
-        tool.setToolBrand("ExampleBrand");
+        tool.setBrand("ExampleBrand");
 
         this.tool = toolRepository.save(tool);
     }
@@ -45,7 +45,7 @@ class ToolRepositoryTest {
         assertNotNull(retrievedTool);
         assertEquals("Hammer", retrievedTool.getToolType());
         assertEquals("HAM123", retrievedTool.getToolCode());
-        assertEquals("ExampleBrand", retrievedTool.getToolBrand());
+        assertEquals("ExampleBrand", retrievedTool.getBrand());
     }
 
     @Test
@@ -53,7 +53,7 @@ class ToolRepositoryTest {
         Tool hammer = new Tool();
         hammer.setToolCode("LMH452");
         hammer.setToolType("Hammer");
-        hammer.setToolBrand("Black & Decker");
+        hammer.setBrand("Black & Decker");
         toolRepository.saveAll(List.of(hammer));
 
         List<Tool> tools = toolRepository.findAll();

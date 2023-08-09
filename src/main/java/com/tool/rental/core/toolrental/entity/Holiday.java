@@ -7,8 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,8 +22,10 @@ public class Holiday {
 
     private boolean weekdayCharge;
     private boolean weekendCharge;
-    private BigDecimal holidayCharge;
+    private boolean holidayCharge;
+    private BigDecimal dailyCharge;
 
-    @OneToMany(mappedBy = "holiday", cascade = CascadeType.ALL)
-    private Set<Tool> tools = new HashSet<>();
+    @OneToMany(mappedBy = "holiday", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Tool> tools;
+
 }

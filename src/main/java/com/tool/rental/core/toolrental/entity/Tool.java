@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,17 +18,7 @@ public class Tool {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    @Column(unique = true)
-    private String toolCode;
-
-    @NotBlank
     private String toolType;
-
-    @NotBlank
-    private String toolBrand;
-
-    @ManyToOne
-    @JoinColumn(name = "holiday_id")
-    private Holiday holiday;
+    private String toolCode;
+    private String brand;
 }
