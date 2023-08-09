@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -18,7 +19,15 @@ public class Tool {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String toolType;
+    @Column(unique = true)
     private String toolCode;
+    private String toolType;
     private String brand;
+
+    @ManyToOne
+    @JoinColumn(name = "holiday_id")
+    private Holiday holiday;
+
+    @OneToMany(mappedBy = "tool", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Checkout> checkouts;
 }

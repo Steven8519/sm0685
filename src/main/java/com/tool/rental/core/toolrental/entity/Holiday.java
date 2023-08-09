@@ -25,7 +25,7 @@ public class Holiday {
     private boolean holidayCharge;
     private BigDecimal dailyCharge;
 
-    @OneToMany(mappedBy = "holiday", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Tool> tools;
 
 }
