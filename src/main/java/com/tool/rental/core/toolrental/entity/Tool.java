@@ -24,4 +24,8 @@ public class Tool {
 
     @NotBlank
     private String toolBrand;
+
+    @ManyToOne
+    @JoinColumn(name = "holiday_id")
+    private Holiday holiday;
 }
