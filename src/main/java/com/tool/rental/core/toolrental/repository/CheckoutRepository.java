@@ -1,10 +1,9 @@
 package com.tool.rental.core.toolrental.repository;
 
-import com.tool.rental.core.toolrental.entity.Tool;
+import com.tool.rental.core.toolrental.entity.Checkout;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ToolRepository extends JpaRepository<Tool, Long> {
-    Tool findByToolCode(String toolCode);
+public interface CheckoutRepository extends JpaRepository<Checkout, Long> {
 }

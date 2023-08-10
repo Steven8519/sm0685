@@ -1,20 +1,23 @@
 package com.tool.rental.core.toolrental.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDate;
+
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Checkout {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "tool_code", referencedColumnName = "toolCode")
     private Tool tool;
+
+    private LocalDate checkoutDate;
     private int rentalDayCount;
     private int discountPercent;
-    private LocalDate checkoutDate;
 }

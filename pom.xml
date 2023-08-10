@@ -97,6 +97,11 @@
             <groupId>org.hibernate.orm</groupId>
             <version>6.2.2.Final</version>
         </dependency>
+        <dependency>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <groupId>jakarta.persistence</groupId>
+            <version>3.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

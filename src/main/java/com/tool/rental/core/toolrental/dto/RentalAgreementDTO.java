@@ -5,14 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CheckoutDTO {
+public class RentalAgreementDTO {
     private Long id;
     private String toolCode;
     private LocalDate checkoutDate;
-    private int rentalDayCount;
+    private int rentalDays;
     private int discountPercent;
 }
